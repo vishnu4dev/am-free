@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import bgImage from "../Assets/Images/pexels-photo-4207785.jpeg";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,18 +26,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const handleExploreOnClick = (props) => {
-  console.log("explore");
-  props.history.push("/homePage");
-};
-const handleNewsOnClick = (props) => {
-  console.log("News");
-  props.history.push("/homePage");
-};
 
-export default function LoginPage(props) {
+
+function LoginPage(props) {
   const classes = useStyles();
+  const {history} = props;
 
+  const handleExploreOnClick = () => {
+    history.push("/explore");
+  };
+  const handleNewsOnClick = () => {
+    console.log("News");
+    // history.push("/homePage");
+  };
   return (
     <div className={classes.root}>
       <Grid container justify="center" alignItems="center" direction="column">
@@ -59,3 +60,5 @@ export default function LoginPage(props) {
     </div>
   );
 }
+
+export default withRouter(LoginPage);
