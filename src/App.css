@@ -42,3 +42,33 @@
   background-image: url("./Assets/background.jpg");
   background-size: cover;
 }
+
+.inputCheck{
+  border: 2px solid red !important;
+  height: 20px;
+}
+
+.input{
+  /* border: 5px solid red !important; */
+  height: 20px;
+}
+
+.testRoot{
+  padding:100px
+}
+
+.testCard{
+  background-color:white;
+}
+
+.addButton{
+  margin-bottom: 20px;
+  background-color: #282c34;
+  color:#ffe600;
+}
+
+.form{
+  /* background-color: #282c34; */
+  color: azure;
+  padding: 20px;
+}
