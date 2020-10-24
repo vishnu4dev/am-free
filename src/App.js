@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import Explore from "./Container/Explore";
 import LoginPage from "./Container/LoginPage";
+import Test from "./Test";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Switch >
         <Route exact path="/" component={LoginPage} />
         <Route exact path="/explore" component={Explore} />
+        <Route exact path='/test' component={Test} />
       </Switch>
     </Router>
   );
