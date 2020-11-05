@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import bgImage from "../Assets/Images/pexels-photo-4207785.jpeg";
+import bgImage from "../Assets/Images/loginpage.jpg";
 import { withRouter } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,13 +14,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    
   },
   paper: {
     textAlign: "center",
-    color: theme.palette.text.secondary,
+    color: "#cccccc",
     margin: "15px",
-    backgroundColor: "darkkhaki",
-  },
+    backgroundColor: "#272a27",
+    fontSize: '25px',
+    background: "none",
+  }, 
   container: {
     height: "100%",
   },
@@ -53,7 +56,7 @@ function LoginPage(props) {
         </Grid>
         <Grid item xs={10}>
           <Paper className={classes.paper} onClick={handleNewsOnClick}>
-            News
+            Be a Blogger
           </Paper>
         </Grid>
       </Grid>
