@@ -1,7 +1,10 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, IconButton } from "@material-ui/core";
 import PostCard from "../component/PostCard";
 import postImg  from "../Assets/blogspot/fk.jpg";
+import AddCircleRoundedIcon from "@material-ui/icons/AddCircleRounded";
+import { withRouter } from "react-router-dom";
+
 
 const data = [
   {
@@ -34,8 +37,21 @@ const data = [
   },
 ];
 
-export default function Explore() {
+function Explore(props) {
+    const handleButtonOnClick = () => {
+        props.history.push("/addNewPost");
+    };
+
   return (
+      <>
+    <div style={{}}>
+        <IconButton
+          style={{ position: "fixed", bottom: 0, right: 0 }}
+          onClick={handleButtonOnClick}
+        >
+          <AddCircleRoundedIcon fontSize="large" />
+        </IconButton>
+      </div>
     <Grid
       container
       direction="column"
@@ -51,7 +67,10 @@ export default function Explore() {
         )
       })}
     </Grid>
+    </>
   );
 }
 
-          {/* <PostCard image="../Assets/blogspot/fk.jpg" nameOfSpot="Fort Kochi" /> */}
+export default withRouter(Explore);
+
+
