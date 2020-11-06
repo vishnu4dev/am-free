@@ -69,7 +69,7 @@ export default function PostCard(props) {
       />
       <CardMedia
         className={classes.media}
-        image="bgimage"
+        image={image}
         title="Paella dish"
       />
       <CardContent>
